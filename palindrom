@@ -1,0 +1,21 @@
+public class Main {
+    static boolean isPalindrom(int number){
+        int temp=number;
+        int lastnumber;
+        int reversenumber=0;
+
+        while (temp!=0){
+            lastnumber =temp % 10 ;
+            reversenumber = (reversenumber * 10) + lastnumber;
+            temp/=10;
+
+        }
+        if(number==temp)
+            return true;
+        else
+            return false;
+    }
+    public static void main(String[] args) {
+        System.out.println(isPalindrom(1234));
+    }
+}
